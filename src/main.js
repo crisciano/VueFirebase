@@ -1,3 +1,7 @@
+// documentation
+// https://jsfiddle.net/chrisvfritz/pyLbpzzx/?utm_source=website&utm_medium=embed&utm_campaign=pyLbpzzx
+// https://vuejs.org/v2/examples/firebase.html
+
 import Vue from 'vue'
 import App from './App.vue'
 import firebase from 'firebase'
@@ -14,5 +18,8 @@ var usersRef = firebase.database().ref('users')
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  firebase: {
+    users: usersRef
+  }
 })
